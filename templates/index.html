@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Encryption</title>
+</head>
+<body>
+    <form method="post">
+        <input type="text" name="text_to_encrypt" placeholder="Text to Encrypt">
+        <select name="algorithm_choice">
+            <option value="caesar">Caesar Cipher</option>
+            <option value="vigenere">Vigenere Cipher</option>
+        </select>
+        <button type="submit">Encrypt</button>
+    </form>
+    <p id="output">{{ output }}</p>
+</body>
+</html>
