@@ -5,13 +5,14 @@
 </head>
 <body>
     <form method="post">
-        <input type="text" name="text_to_encrypt" placeholder="Text to Encrypt">
+        <input type="text" name="text_to_process" placeholder="Text to Process">
         <select name="algorithm_choice">
             <option value="caesar">Caesar Cipher</option>
             <option value="vigenere">Vigenere Cipher</option>
         </select>
-        <input type="Shift or Key" name="shift_or_key" placeholder="Enter a Shift or Key">
-        <button type="submit">Encrypt</button>
+        <input type="text" name="shift_or_key" placeholder="Enter a Shift or Key">
+        <button type="submit" name="action" value="encrypt">Encrypt</button>
+        <button type="submit" name="action" value="decrypt">Decrypt</button>
     </form>
     <p id="output">{{ output }}</p>
 </body>

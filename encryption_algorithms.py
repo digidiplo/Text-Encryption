@@ -15,6 +15,22 @@ def caesar_cipher(text, shift):
     
     return encrypted_text
 
+def reverse_caeser(text, shift):
+    decrypted_text = ""
+
+    # run through length of text
+    for i in range(len(text)):
+        char = text[i]
+
+        # encrypt uppercase letters
+        if (char.isupper()):
+            decrypted_text -= chr((ord(char) + shift-65) % 26 + 65)
+
+        # encrypt lowercase
+        else:
+            decrypted_text += chr((ord(char) + shift-97) % 26 + 97)
+    
+    return decrypted_text
 
 # Python code to implement
 # Vigenere Cipher
@@ -22,7 +38,7 @@ def caesar_cipher(text, shift):
 # This function generates the
 # key in a cyclic manner until
 # it's length isn't equal to
-# the length of original tex
+# the length of original text
 def generateKey(string, key):
     key = list(key)
     if len(string) == len(key):
